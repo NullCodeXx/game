@@ -1,0 +1,318 @@
+/*CSS FIGHT*/
+
+* {
+    margin: 0;
+    padding: 0px;
+    font-size: 70%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* Wallpaper background*/
+
+body {
+    background-image: url("../contents/img/perso1Fight.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -1%;
+}
+
+
+/*Audio*/
+
+.audio {
+    display: flex;
+    justify-content: flex-end;
+}
+
+audio {
+    opacity: 0.2;
+    width: 5%;
+    margin-left: 95%;
+    margin-top: 1%;
+}
+
+audio:hover {
+    opacity: 0.9;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/*Section 1 title & img */
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 30vh;
+    margin-top: -1%;
+}
+
+.section1>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section1>div>img {
+    height: 55%;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.section1>div>h1 {
+    font-size: 3em;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
+    text-align: center;
+}
+
+.section1>div>h1>span {
+    text-align: center;
+    font-size: 20px;
+}
+
+.section1>div>h1>span>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.section1>div>h1>span>a:hover {
+    text-decoration: none;
+    color: #2ecc71;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000000, 5px 6px 7px #2c3e50;
+}
+
+
+/*Section 2 div fight*/
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 80%;
+    height: 55vh;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/*Animation Luffy*/
+
+.section2 .luffy {
+    display: flex;
+    animation: luffy 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    height: 50%;
+    width: 130px;
+    margin-bottom: 4%;
+}
+
+@keyframes luffy {
+    0% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+    }
+    100% {}
+}
+
+
+/*Animatio Nami*/
+
+.section2 .nami {
+    display: flex;
+    animation: nami 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    height: 53%;
+    width: 12%;
+    transform: scaleX(-1);
+    margin-bottom: 4%;
+}
+
+@keyframes nami {
+    0% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 4000px 14000px;
+        background-position: -8px 6px;
+    }
+    100% {}
+}
+
+
+/*Mapping*/
+
+.section2>div {
+    background-image: url("../contents/mapping/mapping10.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 85%;
+}
+
+
+/*bar attack heal*/
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section3 .containerButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.section3 .containerButton .button {
+    height: 90%;
+    width: 4%;
+    border-radius: 100%;
+    background-color: rgba(174, 63, 223, 0.6);
+    margin: 3%;
+}
+
+.section3 .containerButton .button:hover {
+    height: 90%;
+    width: 4%;
+    border-radius: 100%;
+    background-color: rgba(241, 196, 15, 1.0);
+}
+
+.section3 .containerButton .buttonBorder {
+    height: 85%;
+    border: 3px solid rgba(241, 196, 15, 1.0)
+}
+
+.section3 .containerButton .buttonTitle {
+    font-size: 2em;
+    font-weight: 900;
+    color: lightgray;
+    text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
+    text-align: center;
+    padding: 10px;
+}
+
+.section3 .containerButton .buttonTitle:hover {
+    font-size: 2em;
+    font-weight: 900;
+    color: rgba(233, 139, 57, 1.0);
+    text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
+    text-align: center;
+}
+
+
+/*Button input attack */
+
+.button .buttonAttack {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    margin-top: 16%;
+    margin-left: 9%;
+    color: #ffffff;
+    text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
+    text-align: center;
+    border: none;
+    padding: 5%;
+}
+
+.button .buttonAttack:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    margin-top: 16%;
+    margin-left: 9%;
+    color: rgba(0, 0, 0, 1.0);
+    text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
+    text-align: center;
+    border: none;
+    padding: 5%;
+}
+
+
+/*Display stats in button*/
+
+.sectionStats {
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.2);
+    margin-left: 10%;
+}
+
+.sectionStats .ulStats {
+    list-style: none;
+    display: -webkit-inline-flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.sectionStats .ulStats>li {
+    color: #ffffff;
+    text-shadow: 0px 1px 0px black, 1px 1px 1px #000000;
+    letter-spacing: 1px;
+    padding: 1px;
+    margin-left: 0%;
+    margin-top: 0%;
+    font-weight: 900;
+}
+
+.sectionStats .ulStats>li>img {
+    width: 25px;
+    height: 80%;
+}
+
+.statsLife1 {
+    color: red;
+}
+
+.statsDammage1 {
+    color: red;
+}
+
+.statsLife2 {
+    color: red;
+}
+
+.statsDammage2 {
+    color: red;
+}
+
+.statsLife1:hover {
+    color: yellow;
+}
+
+.statsDammage1:hover {
+    color: yellow;
+}
+
+.statsLife2:hover {
+    color: yellow;
+}
+
+.statsDammage2:hover {
+    color: yellow;
+}

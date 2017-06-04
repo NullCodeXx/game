@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="choosePersons.css" />
+    <title>One Piece</title>
+</head>
+
+<body>
+    <div class="audio">
+        <audio src="../contents/soundGame/startGame.mp3" controls loop autoplay>Sons</audio>
+    </div>
+    <!-- Section 1 title & img -->
+    <section class="section1">
+        <div>
+            <img src="../contents/img/titlesvg.png" alt="Titre du logo One Piece">
+            <h1>BIENVENUS SUR ONE PIECE
+                <span><a href="#">VERSION 1.0</a></span></h1>
+        </div>
+    </section>
+    <!-- Section 2 title chosse persons & Start -->
+    <section class="section2">
+        <div>
+            <h2>Choisissez votre personnage
+                <br />
+                <span><a href="#">Lancer la partie</a></span></h2>
+        </div>
+    </section>
+    <!-- Section 3 chosse persons One piece-->
+    <section class="section3">
+        <div class="choosePersons">
+            <div title="Persons">
+                <a href="fight.html">Luffy</a>
+            </div>
+            <div title="Nami">
+                <a href="nami.html">Nami</a>
+            </div>
+            <div title="Chooper">
+                <a href="chopper.html">Chooper</a>
+            </div>
+            <div title="Smoker">
+                <a href="smoker.html">Smoker</a>
+            </div>
+            <div title="Sanji">
+                <a href="sanji.html">Sanji</a>
+            </div>
+            <div title="Ussop">
+                <a href="ussop.html">Ussop</a>
+            </div>
+            <div title="Nico Robin">
+                <a href="nicoRobin.html">Nico Robin</a>
+            </div>
+            <div title="Zorro">
+                <a href="zorro.html">Zorro</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        "use strict";
+
+
+        //Côté sélection de perso, un truc comme ça
+        /*
+        Stock une key et lui spécifie une valeur, 
+        le but étant de faire ceci avec tout les name; map; sound, bg;
+        */
+        localStorage.setItem('perso1', 'luffy');
+        localStorage.setItem('perso2', 'nami');
+    </script>
+</body>
+
+</html>

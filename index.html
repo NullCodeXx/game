@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LE JEUX ONE PIECE V.1</title>
+    <style>
+        body {
+            background-color: black
+        }
+        /*Audio*/
+        
+        .audio {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        audio {
+            opacity: 0.2;
+            width: 5%;
+            margin-left: 95%;
+            margin-top: 1%;
+        }
+        
+        audio:hover {
+            opacity: 0.9;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        /*link*/
+        
+        a {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 3em;
+            color: royalblue;
+            padding: 2px;
+            letter-spacing: 1px;
+        }
+        
+        a:hover {
+            font-weight: 900;
+            font-size: 3em;
+            color: goldenrod;
+            padding: 2px;
+        }
+        /*########################### Carousel*/
+        
+        @keyframes slidy {
+            0% {
+                left: 0%;
+            }
+            10% {
+                left: -110%;
+            }
+            20% {
+                left: -220%;
+            }
+            30% {
+                left: -330%;
+            }
+            40% {
+                left: -440%;
+            }
+            50% {
+                left: -550%;
+            }
+            60% {
+                left: -660%;
+            }
+            70% {
+                left: -770%;
+            }
+            100% {
+                left: -900%;
+            }
+        }
+        
+        body {
+            margin: 0;
+            background-image: url("contents/img/body.jpg");
+            background-repeat: no-repeat;
+        }
+        
+        div#slider {
+            overflow: hidden;
+        }
+        
+        div#slider figure img {
+            width: 22%;
+            float: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        div#slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            font-size: 0;
+            animation: 6s slidy infinite;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -22%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="slider">
+        <h1>
+            <center><a href="onePiece/choosePersons.html">START GAME</a></center>
+        </h1>
+        <div class="audio">
+            <audio src="contents/soundGame/startGame.mp3" controls loop autoplay>Sons</audio>
+        </div>
+        <figure>
+            <img src="contents/img/bg01.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg02.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg03.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg04.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg05.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg06.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg07.jpg" alt="slidy caroussel background image one piece">
+            <img src="contents/img/bg08.jpg" alt="slidy caroussel background image one piece">
+        </figure>
+    </div>
+</body>
+
+</html>
