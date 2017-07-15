@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Création Animation</title>
+
+    <style>
+        .section1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .section2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .section1 div {
+            width: 50px;
+            background-color: lightgray;
+            border: 2px Solid black;
+            margin: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        /*Animation persos */
+        
+        .luffy {
+            animation-name: luffy;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes luffy {
+            0% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -7px 6px;
+                width: 240px;
+            }
+            33.33% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -140px 6px;
+                width: 240px;
+            }
+            66.66% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -270px 6px;
+                width: 240px;
+            }
+            100% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -428px 6px;
+                width: 240px;
+            }
+        }
+        
+        .chopper {
+            animation-name: chopper;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes chopper {
+            0% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -870px 6px;
+                width: 110px;
+            }
+            11.11% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -927px 6px;
+                width: 102px;
+            }
+            33.33% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -982px 6px;
+                width: 102px;
+            }
+            66.66% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1036px 6px;
+                width: 102px;
+            }
+            99.99% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1090px 6px;
+                width: 102px;
+            }
+            100% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1090px 6px;
+                width: 102px;
+            }
+        }
+        
+        .nami {
+            animation-name: nami;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes nami {
+            0% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -11px 6px;
+                width: 137px;
+            }
+            33.33% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -93px 6px;
+                width: 137px;
+            }
+            66.66% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -176px 6px;
+                width: 137px;
+            }
+            100% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -176px 6px;
+                width: 137px;
+            }
+        }
+        
+        .nicoRobin {
+            animation-name: nicoRobin;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes nicoRobin {
+            0% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -12px 16px;
+                width: 130px;
+            }
+            11.11% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -85px 16px;
+                width: 130px;
+            }
+            33.33% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -153px 16px;
+                width: 130px;
+            }
+            99.99% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -230px 16px;
+                width: 130px;
+            }
+            100% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -230px 16px;
+                width: 130px;
+            }
+        }
+        
+        .sanji {
+            animation-name: sanji;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes sanji {
+            0% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: 3px 14px;
+                width: 135px;
+            }
+            33.33% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -65px 14px;
+                width: 135px;
+            }
+            66.66% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -130px 14px;
+                width: 135px;
+            }
+            100% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -200px 14px;
+                width: 135px;
+            }
+        }
+        
+        .smoker {
+            animation-name: smoker;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes smoker {
+            0% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -3px 5px;
+                width: 138px;
+            }
+            50% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -77px 5px;
+                width: 138px;
+            }
+            99.99% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -151px 5px;
+                width: 138px;
+            }
+            100% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -151px 5px;
+                width: 138px;
+            }
+        }
+        
+        .ussop {
+            animation-name: ussop;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes ussop {
+            0% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -13px -10px;
+                width: 200px;
+            }
+            50% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -116px -10px;
+                width: 200px;
+            }
+            99.99% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -216px -10px;
+                width: 200px;
+            }
+            100% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -218px -10px;
+                width: 200px;
+            }
+        }
+        
+        .zorro {
+            animation-name: zorro;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes zorro {
+            0% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -20px -21px;
+                width: 213px;
+            }
+            33.33% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -141px -21px;
+                width: 213px;
+            }
+            66.66% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -265px -21px;
+                width: 213px;
+            }
+            100% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -388px -21px;
+                width: 213px;
+            }
+        }
+        /*Animation Attack*/
+        
+        .section2 div {
+            width: 50px;
+            background-color: lightgrey;
+            border: 2px Solid black;
+            margin: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .luffyAttack {
+            animation-name: luffyAttack;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes luffyAttack {
+            0% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1200px 6px;
+                width: 310px;
+            }
+            5.55% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1350px 6px;
+                width: 310px;
+            }
+            11.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1501px 6px;
+                width: 370px;
+            }
+            16.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1675px 6px;
+                width: 330px;
+            }
+            22.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1826px 6px;
+                width: 330px;
+            }
+            27.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1980px 6px;
+                width: 330px;
+            }
+            33.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -2137px 6px;
+                width: 380px;
+            }
+            38.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -2315px 6px;
+                width: 330px;
+            }
+            44.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -2315px 6px;
+                width: 330px;
+            }
+            49.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -26px -966px;
+                width: 910px;
+            }
+            55.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -692px -972px;
+                width: 910px;
+            }
+            60.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1150px -992px;
+                width: 1700px;
+            }
+            66.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -1150px -972px;
+                width: 2100px;
+            }
+            71.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -2130px -972px;
+                width: 2100px;
+            }
+            77.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -3055px -968px;
+                width: 990px;
+            }
+            82.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -3856px -968px;
+                width: 1990px;
+            }
+            88.10% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -4356px -968px;
+                width: 1990px;
+            }
+            93.60% {
+                background-image: url("luffy.png");
+                background-size: 2700px 13000px;
+                background-position: -4832px -968px;
+                width: 1990px;
+            }
+        }
+        
+        .chopperAttack {
+            animation-name: chopperAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes chopperAttack {
+            0% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -870px 6px;
+                width: 110px;
+            }
+            11.11% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -927px 6px;
+                width: 102px;
+            }
+            33.33% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -982px 6px;
+                width: 102px;
+            }
+            66.66% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1036px 6px;
+                width: 102px;
+            }
+            99.99% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1090px 6px;
+                width: 102px;
+            }
+            100% {
+                background-image: url("chopper.png");
+                background-size: 2700px 13000px;
+                background-position: -1090px 6px;
+                width: 102px;
+            }
+        }
+        
+        .namiAttack {
+            animation-name: namiAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes namiAttack {
+            0% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -11px 6px;
+                width: 137px;
+            }
+            33.33% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -93px 6px;
+                width: 137px;
+            }
+            66.66% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -176px 6px;
+                width: 137px;
+            }
+            100% {
+                background-image: url("nami.png");
+                background-size: 2700px 13000px;
+                background-position: -176px 6px;
+                width: 137px;
+            }
+        }
+        
+        .nicoRobinAttack {
+            animation-name: nicoRobinAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes nicoRobinAttack {
+            0% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -12px 16px;
+                width: 130px;
+            }
+            11.11% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -85px 16px;
+                width: 130px;
+            }
+            33.33% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -153px 16px;
+                width: 130px;
+            }
+            99.99% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -230px 16px;
+                width: 130px;
+            }
+            100% {
+                background-image: url("nicoRobin.png");
+                background-size: 2700px 13000px;
+                background-position: -230px 16px;
+                width: 130px;
+            }
+        }
+        
+        .sanjiAttack {
+            animation-name: sanjiAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes sanjiAttack {
+            0% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: 3px 14px;
+                width: 135px;
+            }
+            33.33% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -65px 14px;
+                width: 135px;
+            }
+            66.66% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -130px 14px;
+                width: 135px;
+            }
+            100% {
+                background-image: url("sanji.png");
+                background-size: 2972px 15000px;
+                background-position: -200px 14px;
+                width: 135px;
+            }
+        }
+        
+        .smokerAttack {
+            animation-name: smokerAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes smokerAttack {
+            0% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -3px 5px;
+                width: 138px;
+            }
+            50% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -77px 5px;
+                width: 138px;
+            }
+            99.99% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -151px 5px;
+                width: 138px;
+            }
+            100% {
+                background-image: url("smoker.png");
+                background-size: 1700px 12000px;
+                background-position: -151px 5px;
+                width: 138px;
+            }
+        }
+        
+        .ussopAttack {
+            animation-name: ussopAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes ussopAttack {
+            0% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -13px -10px;
+                width: 200px;
+            }
+            50% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -116px -10px;
+                width: 200px;
+            }
+            99.99% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -216px -10px;
+                width: 200px;
+            }
+            100% {
+                background-image: url("ussop.png");
+                background-size: 2300px 13000px;
+                background-position: -218px -10px;
+                width: 200px;
+            }
+        }
+        
+        .zorroAttack {
+            animation-name: zorroAttack;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step-end;
+            height: 28vh;
+            width: 130px;
+            margin-bottom: 4%;
+            transform: scaleX(1);
+            position: relative;
+        }
+        
+        @keyframes zorroAttack {
+            0% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -20px -21px;
+                width: 213px;
+            }
+            33.33% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -141px -21px;
+                width: 213px;
+            }
+            66.66% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -265px -21px;
+                width: 213px;
+            }
+            100% {
+                background-image: url("zorro.png");
+                background-size: 2500px 18000px;
+                background-position: -388px -21px;
+                width: 213px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section class="section1">
+            <h1>ANIMATION POSTURE DE COMBAT</h1>
+            <div class="luffy"></div>
+            <div class="chopper"></div>
+            <div class="nami"></div>
+            <div class="nicoRobin"></div>
+            <div class="sanji"></div>
+            <div class="smoker"></div>
+            <div class="ussop"></div>
+            <div class="zorro"></div>
+        </section>
+
+
+        <section class="section2">
+            <h1>ANIMATION ATTAQUE COMBAT</h1>
+            <div class="luffyAttack"></div>
+            <div class="chopperAttack"></div>
+            <div class="namiAttack"></div>
+            <div class="nicoRobinAttack"></div>
+            <div class="sanjiAttack"></div>
+            <div class="smokerAttack"></div>
+            <div class="ussopAttack"></div>
+            <div class="zorroAttack"></div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*design sprite*/
+        
+        .sprite {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        
+        .sprite.luffy {
+            background-color: red;
+        }
+        
+        .sprite.nami {
+            background-color: blue;
+        }
+        
+        .sprite.sanji {
+            background-color: lime;
+        }
+        
+        .sprite.smoker {
+            background-color: violet;
+        }
+        
+        .sprite.chopper {
+            background-color: yellow;
+        }
+        
+        .sprite.ussop {
+            background-color: hotpink;
+        }
+        
+        .sprite.nicoRobin {
+            background-color: darkblue;
+        }
+        
+        .sprite.zorro {
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <!--name-->
+    <h1 id="nom"></h1>
+    <!--sprite-->
+    <div class="sprite"></div>
+    <!--button-->
+    <button class="changePerso" data-perso="nami">nami</button>
+    <button class="changePerso">luffy</button>
+    <button class="changePerso">chopper</button>
+    <button class="changePerso">sanji</button>
+    <button class="changePerso">smoker</button>
+    <button class="changePerso">zorro</button>
+    <button class="changePerso">nicoRobin</button>
+    <button class="changePerso">ussop</button>
+
+
+    <script>
+        // Utilise le localStorage et en fonction de ce que nous choisirons sa seras placer a perso1. 
+        let nom = localStorage.getItem('perso1');
+        // selectionne le h1 (idnom) et lui ajoute le contenus du localstorage que l'on a recuperer. 
+        document.querySelector('#nom').textContent = nom;
+        // Selectionne le div (class sprite) et le transforme par nom qui est le localStorage. 
+        document.querySelector('.sprite').classList.add(nom);
+        //Selection tout les buttons (class changePerso) puis fais une boucle foreach pour tous les parcourir.
+        //Avec un argument btn pour que sa soit pour tout les button..
+        document.querySelectorAll('.changePerso').forEach(function(btn) {
+            //ajoute un evenement click qui est associer a la argument.
+            btn.addEventListener('click', function() {
+                //place la valeur stocker dans le getAttribute pour exemple.
+                console.log(btn.getAttribute('data-perso'));
+                //Recupere du localStorage les valeur que nous avons stocker et ajoutons l'argunment soit
+                //btn qui correspond au button et l'écrivent dans le contenus.
+                localStorage.setItem('perso1', btn.textContent);
+            });
+        });
+    </script>
+</body>
+
+</html>

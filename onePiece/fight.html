@@ -10,21 +10,34 @@
 </head>
 
 <body>
-    <div class="audio">
+    <!-- LE SONS EST DEJA FAIS EN JS
+        <div class="audio">
         <audio src="../contents/soundGame/nami.mp3" controls loop autoplay>Sons</audio>
     </div>
-
+    -->
     <section class="section1">
         <div>
             <img src="../contents/img/titlesvg.png" alt="Titre du logo One Piece">
-            <h1>VOUS AVEZ CHOISIS NAMI
-                <span><a href="#">VERSION 1.0</a></span></h1>
+            <h1>PERSOS ==> <span class="persoName1">perso1</span> VS <span class="persoName2">perso2</span>
+                <span><a href="#">VERSION 0.0.1</a></span></h1>
         </div>
     </section>
     <!--Section 2 div fight-->
+    <main class="sectionHeader">
+        <section class="sectionLife">
+            <div id="barreLifePerso1">
+                <h4 class="h4"></h4>
+            </div>
+        </section>
 
+        <section class="sectionLife">
+            <div id="barreLifePerso2">
+                <h4 class="h4"></h4>
+            </div>
+        </section>
+    </main>
     <section class="section2">
-        <div>
+        <div class="divSection2">
             <div class="perso1"></div>
             <div class="perso2"></div>
         </div>
@@ -33,20 +46,20 @@
     <section class="section3">
         <div class="containerButton">
             <div class="button">
-                <button input="submit" class="buttonAttack" id="buttonPlayer1A">ATT</button>
+                <button type="submit" id="buttonPlayer1A" class="buttonAttack">ATT</button>
             </div>
             <div class="button">
-                <button input="submit" class="buttonAttack" id="buttonPlayer1H">POT</button>
+                <button type="submit" id="buttonPlayer1H" class="buttonAttack">POT</button>
             </div>
             <!--Entre les buttons-->
             <div class="buttonBorder"></div>
-            <p class="buttonTitle">MORTEL CONSOLE</p>
+            <p class="buttonTitle"><a href="choosePersons.html" title="Retour au menus">MORTEL CONSOLE</a></p>
             <div class="buttonBorder"></div>
             <div class="button">
-                <button input="submit" class="buttonAttack" id="buttonPlayer2A">ATT</button>
+                <button type="submit" class="buttonAttack" id="buttonPlayer2A">ATT</button>
             </div>
             <div class="button">
-                <button input="submit" class="buttonAttack" id="buttonPlayer2H">POT</button>
+                <button type="submit" class="buttonAttack" id="buttonPlayer2H">POT</button>
             </div>
         </div>
     </section>
@@ -60,137 +73,7 @@
         </ul>
     </section>
 
-    <script>
-        //Instruction strict JS.
-        "use strict";
-
-
-
-        //Côté page de combat :
-        //Côté sélection de perso, un truc comme ça
-        let perso1 = localStorage.getItem('perso1');
-        let perso2 = localStorage.getItem('perso2');
-        document.body.style.backgroundImage = 'url("../contents/img/' + perso1 + 'Fight.jpg")';
-        document.body.classList.add(perso1);
-
-
-        // ################ CREATE OBJECT
-
-        //object player1
-        let player1 = {
-            name: perso1,
-            life: 1000,
-            dammage: 0,
-            potheal: function() {
-                //this permet de retrouver une key de l'object.
-                this.dammage = attdefRandomMinMax(20, 90);
-                return this.dammage;
-            },
-            attPower: function() {
-                this.dammage = attdefRandomMinMax(10, 70);
-                return this.dammage;
-            },
-        };
-
-        //object player2
-        let player2 = {
-            name: perso2,
-            life: 1000,
-            dammage: 0,
-            potheal: function() {
-                //this permet de retrouver une key de l'object.
-                this.dammage = attdefRandomMinMax(20, 90);
-                return this.dammage;
-            },
-            attPower: function() {
-                this.dammage = attdefRandomMinMax(10, 70);
-                return this.dammage;
-            },
-        };
-        console.log("Stats Luffy: ", player1, "Stats Namy : ", player2);
-
-        // ################ FUNCTION
-
-        // Function d'attack.
-        let funcAtt = function(target, attacker) {
-            target.life -= attacker.attPower();
-        };
-        console.log(player1, player2);
-        //Function heal.
-        let heal = function(healPlayer) {
-            healPlayer.life += healPlayer.sortHeal();
-        };
-        console.log(player1, player2);
-        let funcHeal = function(healPlayer) {
-            healPlayer.life += healPlayer.potheal();
-        };
-        console.log(player1, player2);
-        //Function random.
-        function attdefRandomMinMax(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        };
-        attdefRandomMinMax();
-
-        // ################ EVENT LISTENER
-
-        //Create event click button att player1.
-
-        document.querySelector("#buttonPlayer1A").addEventListener("click", function() {
-            funcAtt(player2, player1);
-            console.log("Luffy a infliger des dégâts à Nami: ", player2.life);
-            display();
-        });
-
-        //Create event click button heal player1.
-        document.querySelector("#buttonPlayer1H").addEventListener("click", function() {
-            funcHeal(player1);
-            console.log("Luffy à récuperer des points de vie", player1.life);
-            display();
-        });
-
-        //Create event click button att player2.
-        document.querySelector("#buttonPlayer2A").addEventListener("click", function() {
-            funcAtt(player1, player2);
-            console.log("Nami a infliger des dégâts a Luffy: ", player1.life);
-            display();
-        });
-
-        //Create event click button heal player2.
-        document.querySelector("#buttonPlayer2H").addEventListener("click", function() {
-            funcHeal(player2);
-            console.log("Nami à récuperer des points de vie", player2.life);
-            display();
-        });
-
-        // ################ FUNCTION DISPLAY.
-        function display() {
-            //Life Luffy.
-            let displayP1L = document.querySelector(".statsLife1");
-            displayP1L.textContent = player1.life;
-
-            //Dammage Luffy.
-            let displayP1D = document.querySelector(".statsDammage1");
-            displayP1D.textContent = player1.dammage;
-
-            //Life Nami.
-            let displayP2L = document.querySelector(".statsLife2");
-            displayP2L.textContent = player2.life;
-
-            //Dammage Nami.
-            let displayP2D = document.querySelector(".statsDammage2");
-            displayP2D.textContent = player2.dammage;
-        };
-        display();
-
-        /*
-        Renommer fichier luffy.html en combatFight.html et son style en combatFight.css dansune feuille a part.
-        Dans le style faire des modification et rendre la page plus générique.
-        Dans le fichier combatFight.html faire des localStorage.getItems(...) et dans l'indexOP faire la meme chose,
-        en utilisant les set.items.
-        */
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

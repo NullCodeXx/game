@@ -195,6 +195,10 @@ audio:hover {
     background-position-x: 0%;
     background-position-y: 50%;
     background-repeat: no-repeat;
+    /*BOX SHADOW*/
+    -webkit-box-shadow: 0px 0px 85px -14px rgba(255, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 85px -14px rgba(255, 0, 0, 0.6);
+    box-shadow: 0px 0px 85px -14px rgba(255, 0, 0, 0.6);
 }
 
 .section3>div.choosePersons>div>a {

@@ -11,14 +11,14 @@
 
 <body>
     <div class="audio">
-        <audio src="../contents/soundGame/startGame.mp3" controls loop autoplay>Sons</audio>
+        <audio src="../contents/soundGame/roirap.mp3" controls loop autoplay>Sons</audio>
     </div>
     <!-- Section 1 title & img -->
     <section class="section1">
         <div>
             <img src="../contents/img/titlesvg.png" alt="Titre du logo One Piece">
-            <h1>BIENVENUS SUR ONE PIECE
-                <span><a href="#">VERSION 1.0</a></span></h1>
+            <h1>BIENVENUE SUR ONE PIECE
+                <span><a href="#">VERSION 0.0.1</a></span></h1>
         </div>
     </section>
     <!-- Section 2 title chosse persons & Start -->
@@ -26,42 +26,63 @@
         <div>
             <h2>Choisissez votre personnage
                 <br />
-                <span><a href="#">Lancer la partie</a></span></h2>
+                <span><a href="fight.html">Lancer la partie</a></span></h2>
         </div>
     </section>
     <!-- Section 3 chosse persons One piece-->
     <section class="section3">
         <div class="choosePersons">
             <div title="Persons">
-                <a href="fight.html">Luffy</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Luffy</a>
+                <button class="changePerso">luffy</button>
             </div>
             <div title="Nami">
-                <a href="nami.html">Nami</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Nami</a>
+                <button class="changePerso" data-perso="nami">nami</button>
             </div>
             <div title="Chooper">
-                <a href="chopper.html">Chooper</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Chooper</a>
+                <button class="changePerso">chopper</button>
             </div>
             <div title="Smoker">
-                <a href="smoker.html">Smoker</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Smoker</a>
+                <button class="changePerso">smoker</button>
             </div>
             <div title="Sanji">
-                <a href="sanji.html">Sanji</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Sanji</a>
+                <button class="changePerso">sanji</button>
             </div>
             <div title="Ussop">
-                <a href="ussop.html">Ussop</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Ussop</a>
+                <button class="changePerso">ussop</button>
             </div>
             <div title="Nico Robin">
-                <a href="nicoRobin.html">Nico Robin</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Nico Robin</a>
+                <button class="changePerso">nicoRobin</button>
             </div>
             <div title="Zorro">
-                <a href="zorro.html">Zorro</a>
+                <!--LocalStorage button change style.-->
+                <a href="#" title="Cliquer sur lancer la partie apres avoir choisis votre personnage">Zorro</a>
+                <button class="changePerso">zorro</button>
             </div>
         </div>
     </section>
+    <!--Section LocalStorage.-->
+    <section>
+        <!--<h1 id="nom"></h1>-->
+        <!--sprite-->
+        <!--<div class="sprite"></div>-->
+        <!--button-->
+    </section>
     <script>
         "use strict";
-
-
         //Côté sélection de perso, un truc comme ça
         /*
         Stock une key et lui spécifie une valeur, 
@@ -69,6 +90,32 @@
         */
         localStorage.setItem('perso1', 'luffy');
         localStorage.setItem('perso2', 'nami');
+    </script>
+
+    <script>
+        let compteur = 0;
+
+        // Utilise le localStorage et choisis une valeur aleatoire 
+        let nom = localStorage.getItem('perso1');
+        //Selection tout les buttons (class changePerso) puis fais une boucle foreach pour tous les parcourir.
+        //Avec un argument btn pour que sa soit pour tout les button..
+        document.querySelectorAll('.changePerso').forEach(function(btn) {
+            //ajoute un evenement click qui est associer a la argument.
+            btn.addEventListener('click', function() {
+                //place la valeur stocker dans le getAttribute pour exemple.
+                console.log(btn.getAttribute('data-perso'));
+                //Recupere du localStorage les valeur que nous avons stocker et ajoutons l'argunment soit
+                //btn qui correspond au button et l'écrivent dans le contenus.
+
+                //Chois des personnage au click.
+                if (compteur % 2 === 0) {
+                    localStorage.setItem('perso1', btn.textContent);
+                } else {
+                    localStorage.setItem('perso2', btn.textContent);
+                }
+                compteur++;
+            });
+        });
     </script>
 </body>
 

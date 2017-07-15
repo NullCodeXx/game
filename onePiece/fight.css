@@ -94,6 +94,37 @@ audio:hover {
 
 /*Section 2 div fight*/
 
+
+/*Barre life*/
+
+.sectionHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.sectionheader .sectionLife {
+    width: 400px;
+}
+
+#barreLifePerso1 {
+    width: 400px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+#barreLifePerso2 {
+    width: 400px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+#h4 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000000, 5px 6px 7px #2c3e50;
+}
+
 .section2 {
     display: flex;
     justify-content: center;
@@ -111,55 +142,11 @@ audio:hover {
 }
 
 
-/*Animation Luffy*/
-
-.section2 .luffy {
-    display: flex;
-    animation: luffy 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: step-end;
-    height: 50%;
-    width: 130px;
-    margin-bottom: 4%;
-}
-
-@keyframes luffy {
-    0% {
-        background-image: url("../contents/sprites/luffy.png");
-        background-size: 2700px 13000px;
-        background-position: -7px 6px;
-    }
-    100% {}
-}
-
-
-/*Animatio Nami*/
-
-.section2 .nami {
-    display: flex;
-    animation: nami 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: step-end;
-    height: 53%;
-    width: 12%;
-    transform: scaleX(-1);
-    margin-bottom: 4%;
-}
-
-@keyframes nami {
-    0% {
-        background-image: url("../contents/sprites/nami.png");
-        background-size: 4000px 14000px;
-        background-position: -8px 6px;
-    }
-    100% {}
-}
-
-
 /*Mapping*/
 
 .section2>div {
-    background-image: url("../contents/mapping/mapping10.jpg");
+    /*Le BackgroundImage ne sert plus du faite que cela est fais en js.*/
+    /*background-image: url("../contents/mapping/mapping10.jpg"); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: 50%;
@@ -191,7 +178,7 @@ audio:hover {
     height: 90%;
     width: 4%;
     border-radius: 100%;
-    background-color: rgba(174, 63, 223, 0.6);
+    background-color: rgba(255, 0, 0, 0.8);
     margin: 3%;
 }
 
@@ -199,7 +186,7 @@ audio:hover {
     height: 90%;
     width: 4%;
     border-radius: 100%;
-    background-color: rgba(241, 196, 15, 1.0);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .section3 .containerButton .buttonBorder {
@@ -207,7 +194,7 @@ audio:hover {
     border: 3px solid rgba(241, 196, 15, 1.0)
 }
 
-.section3 .containerButton .buttonTitle {
+.section3 .containerButton .buttonTitle a {
     font-size: 2em;
     font-weight: 900;
     color: lightgray;
@@ -216,7 +203,7 @@ audio:hover {
     padding: 10px;
 }
 
-.section3 .containerButton .buttonTitle:hover {
+.section3 .containerButton .buttonTitle a:hover {
     font-size: 2em;
     font-weight: 900;
     color: rgba(233, 139, 57, 1.0);
@@ -228,23 +215,23 @@ audio:hover {
 /*Button input attack */
 
 .button .buttonAttack {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.8);
     border-radius: 100%;
     margin-top: 16%;
     margin-left: 9%;
-    color: #ffffff;
+    color: #fff;
     text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
     text-align: center;
     border: none;
     padding: 5%;
 }
 
-.button .buttonAttack:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.button .buttonAttack:active {
+    background-color: rgba(0, 255, 0, 1);
     border-radius: 100%;
     margin-top: 16%;
     margin-left: 9%;
-    color: rgba(0, 0, 0, 1.0);
+    color: #000;
     text-shadow: 5px 10px 12px black, 5px 6px 7px #2c3e50;
     text-align: center;
     border: none;
@@ -315,4 +302,1085 @@ audio:hover {
 
 .statsDammage2:hover {
     color: yellow;
+}
+
+
+/*#################### ANIMATION PERSO 1 perso 2*/
+
+
+/*Animation Luffy*/
+
+.section2 .perso1,
+.section2 .perso2 {
+    display: flex;
+    /*animation: perso1 0.5s;*/
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    height: 50%;
+    width: 130px;
+    margin-bottom: 4%;
+    transform: scaleX(1);
+    position: relative;
+}
+
+.section2 .perso2 {
+    transform: scaleX(-1);
+}
+
+@keyframes luffy {
+    /*0% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }*/
+    0% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -14px -15px;
+        width: 150px;
+    }
+    29.40% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -290px -15px;
+        width: 132px;
+    }
+    41.16% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -0px -470px;
+        width: 126px;
+        height: 40vh;
+    }
+    47.04% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -130px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    52.92% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -230px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    58.80% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -355px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    64.68% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -485px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    70.56% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -631px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    76.44% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -761px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    82.32% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -893px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    88.20% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1005px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+    94.08% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1130px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+    99.96% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1265px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+}
+
+
+/*Animation Nami*/
+
+@keyframes nami {
+    0% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -11px 6px;
+        width: 80px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -93px 6px;
+        width: 80px;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -176px 6px;
+        width: 80px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -176px 6px;
+        width: 80px;
+    }
+}
+
+
+/*Animation Chopper*/
+
+@keyframes chopper {
+    0% {
+        background-image: url("../contents/sprites/chopper.png");
+        background-size: 2700px 13000px;
+        background-position: -870px 6px;
+        width: 60px;
+    }
+    11.11% {
+        background-image: url("../contents/sprites/chopper.png");
+        background-size: 2700px 13000px;
+        background-position: -927px 6px;
+        width: 54px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/chopper.png");
+        background-size: 2700px 13000px;
+        background-position: -982px 6px;
+        width: 55px;
+    }
+    99.99% {
+        background-image: url("../contents/sprites/chopper.png");
+        background-size: 2700px 13000px;
+        background-position: -1036px 6px;
+        width: 102px;
+    }
+    100% {
+        background-image: url("../contents/sprites/chopper.png");
+        background-size: 2700px 13000px;
+        background-position: -1036px 6px;
+        width: 102px;
+    }
+}
+
+
+/*Animation Smoker*/
+
+@keyframes smoker {
+    0% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 1700px 12000px;
+        background-position: -3px 5px;
+        width: 75px;
+    }
+    50% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 1700px 12000px;
+        background-position: -77px 5px;
+        width: 75px;
+    }
+    99.99% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 1700px 12000px;
+        background-position: -151px 5px;
+        width: 75px;
+    }
+    100% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 1700px 12000px;
+        background-position: -151px 5px;
+        width: 75px;
+    }
+}
+
+
+/*Animation Sanji*/
+
+@keyframes sanji {
+    0% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2972px 15000px;
+        background-position: 3px 14px;
+        width: 70px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2972px 15000px;
+        background-position: -65px 14px;
+        width: 70px;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2972px 15000px;
+        background-position: -130px 14px;
+        width: 70px;
+    }
+    100% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2972px 15000px;
+        background-position: -200px 14px;
+        width: 70px;
+    }
+}
+
+
+/*Animation Ussop*/
+
+@keyframes ussop {
+    0% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2300px 13000px;
+        background-position: -13px -10px;
+        width: 100px;
+    }
+    50% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2300px 13000px;
+        background-position: -116px -10px;
+        width: 100px;
+    }
+    99.99% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2300px 13000px;
+        background-position: -216px -10px;
+        width: 100px;
+    }
+    100% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2300px 13000px;
+        background-position: -218px -10px;
+        width: 100px;
+    }
+}
+
+
+/*Animation NicoRobin*/
+
+@keyframes nicoRobin {
+    0% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -12px 16px;
+        width: 70px;
+    }
+    11.11% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -85px 16px;
+        width: 70px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -153px 16px;
+        width: 70px;
+    }
+    99.99% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -230px 16px;
+        width: 70px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -230px 16px;
+        width: 70px;
+    }
+}
+
+
+/*Animation Zorro*/
+
+@keyframes zorro {
+    0% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2500px 18000px;
+        background-position: -20px -45px;
+        width: 113px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2500px 18000px;
+        background-position: -141px -45px;
+        width: 113px;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2500px 18000px;
+        background-position: -265px -45px;
+        width: 113px;
+    }
+    100% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2500px 18000px;
+        background-position: -388px -45px;
+        width: 113px;
+    }
+}
+
+
+/*###############################
+#################################
+#################################
+#################################
+#################################
+#################################
+#################################
+#################################*/
+
+
+/*ANIMATION ATTACK lufffy*/
+
+@keyframes attackluffy {
+    0% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1200px 6px;
+        width: 150px;
+        left: 65px;
+    }
+    5.55% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1350px 6px;
+        width: 150px;
+        left: 130px;
+    }
+    11.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1501px 6px;
+        width: 170px;
+        left: 195px;
+    }
+    16.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1675px 6px;
+        width: 150px;
+        left: 255px;
+    }
+    22.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1826px 6px;
+        width: 150px;
+        left: 315px;
+    }
+    27.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1980px 6px;
+        width: 160px;
+        left: px;
+    }
+    33.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -2137px 6px;
+        width: 178px;
+        left: px;
+    }
+    38.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -2315px 6px;
+        width: 330px;
+        left: px;
+    }
+    44.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -2315px 6px;
+        width: 330px;
+        left: px;
+    }
+    49.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -26px -966px;
+        width: 315px;
+        left: px;
+    }
+    55.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -692px -972px;
+        width: 425px;
+        left: px;
+    }
+    60.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1150px -992px;
+        width: 480px;
+        left: px;
+    }
+    66.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -1150px -972px;
+        width: 480px;
+        left: px;
+    }
+    71.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -2130px -972px;
+        width: 480px;
+        left: px;
+    }
+    77.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -3055px -968px;
+        width: 320px;
+        left: px;
+    }
+    82.60% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -3856px -968px;
+        width: 490px;
+        left: 400px;
+    }
+    88.10% {
+        background-image: url("../contents/sprites/luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -4356px -968px;
+        width: 460px;
+        left: 400px;
+    }
+    93.60% {
+        background-image: url("luffy.png");
+        background-size: 2700px 13000px;
+        background-position: -4832px -968px;
+        width: 460px;
+        left: 400px;
+    }
+}
+
+
+/*ANIMATION ATTACK nami*/
+
+@keyframes attacknami {
+    0% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION ATTACK Ussop*/
+
+@keyframes attackussop {
+    0% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION ATTACK smoker*/
+
+@keyframes attacksmoker {
+    0% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION ATTACK Chopper*/
+
+@keyframes attackchopper {
+    0% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 0px -70px;
+        width: 135px;
+        left: -65px;
+    }
+    16.66% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 120px -70px;
+        width: 135px;
+        left: -130px;
+    }
+    33.32% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 230px -70px;
+        width: 125px;
+        left: -195px;
+    }
+    49.98% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 360px -70px;
+        width: 125px;
+        left: -255px;
+    }
+    66.64% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 490px -70px;
+        width: 125px;
+        left: -315px;
+    }
+    83.30% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 640px -70px;
+        width: 125px;
+        left: -400px;
+    }
+    99.96% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 785px -70px;
+        width: 125px;
+        left: -400px;
+    }
+}
+
+
+/*ANIMATION ATTACK nicoRobin*/
+
+@keyframes attacknicoRobin {
+    0% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION ATTACK zorro*/
+
+@keyframes attackzorro {
+    0% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION ATTACK sanji*/
+
+@keyframes attacksanji {
+    0% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE luffy*/
+
+@keyframes defenseluffy {
+    0% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -14px -15px;
+        width: 150px;
+    }
+    29.40% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -290px -15px;
+        width: 132px;
+    }
+    41.16% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -0px -470px;
+        width: 126px;
+        height: 40vh;
+    }
+    47.04% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -130px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    52.92% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -230px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    58.80% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -355px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    64.68% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -485px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    70.56% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -631px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    76.44% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -761px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    82.32% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -893px -470px;
+        width: 100px;
+        height: 40vh;
+    }
+    88.20% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1005px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+    94.08% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1130px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+    99.96% {
+        background-image: url("../contents/sprites/luffy1.png");
+        background-size: 1900px 1100px;
+        background-position: -1265px -470px;
+        width: 128px;
+        height: 40vh;
+    }
+}
+
+
+/*ANIMATION DEFENSE nami*/
+
+@keyframes defensenami {
+    0% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nami.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE Ussop*/
+
+@keyframes defenseussop {
+    0% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/ussop.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE smoker*/
+
+@keyframes defensesmoker {
+    0% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/smoker.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE Chopper*/
+
+@keyframes defensechopper {
+    0% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 0px -70px;
+        width: 135px;
+        left: -65px;
+    }
+    16.66% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 120px -70px;
+        width: 135px;
+        left: -130px;
+    }
+    33.32% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 230px -70px;
+        width: 125px;
+        left: -195px;
+    }
+    49.98% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 360px -70px;
+        width: 125px;
+        left: -255px;
+    }
+    66.64% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 490px -70px;
+        width: 125px;
+        left: -315px;
+    }
+    83.30% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 640px -70px;
+        width: 125px;
+        left: -400px;
+    }
+    99.96% {
+        background-image: url("../contents/sprites/chopper1.png");
+        background-size: 900px 300px;
+        background-position: 785px -70px;
+        width: 125px;
+        left: -400px;
+    }
+}
+
+
+/*ANIMATION DEFENSE nicoRobin*/
+
+@keyframes defensenicoRobin {
+    0% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/nicoRobin.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE zorro*/
+
+@keyframes defensezorro {
+    0% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/zorro.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
+}
+
+
+/*ANIMATION DEFENSE sanji*/
+
+@keyframes defensesanji {
+    0% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -7px 6px;
+        width: 130px;
+    }
+    33.33% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -140px 6px;
+        width: 130px;
+        left: 10%;
+    }
+    66.66% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -270px 6px;
+        width: 130px;
+    }
+    100% {
+        background-image: url("../contents/sprites/sanji.png");
+        background-size: 2700px 13000px;
+        background-position: -428px 6px;
+        width: 130px;
+    }
 }

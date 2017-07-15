@@ -117,10 +117,10 @@
 
     <div id="slider">
         <h1>
-            <center><a href="onePiece/choosePersons.html">START GAME</a></center>
+            <center><a href="onePiece/choosePersons.html" id="ahref">START GAME</a></center>
         </h1>
         <div class="audio">
-            <audio src="contents/soundGame/startGame.mp3" controls loop autoplay>Sons</audio>
+            <audio src="contents/soundGame/intro.mp3" controls loop autoplay>Sons</audio>
         </div>
         <figure>
             <img src="contents/img/bg01.jpg" alt="slidy caroussel background image one piece">
@@ -133,6 +133,13 @@
             <img src="contents/img/bg08.jpg" alt="slidy caroussel background image one piece">
         </figure>
     </div>
+
+    <script>
+        let soundluffyH = new Audio("contents/soundPlayers/luffy/cclick.mp3");
+        document.querySelector("#ahref").addEventListener("click", function() {
+            soundluffyH.play(), 1;
+        });
+    </script>
 </body>
 
 </html>
